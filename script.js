@@ -1,4 +1,5 @@
 // Getting input via STDIN
+const { flushCompileCache } = require("module");
 const readline = require("readline");
 
 const inp = readline.createInterface({
@@ -12,12 +13,9 @@ inp.on("line", (data) => {
 });
 
 inp.on("close", () => {
-   let sum=0;
-let num = userInput[0].split(" ").map(Number);;
-  console.log(num.length)
+let num=userInput[0]
 
-  for(let i=0;i<num.length;i++){
-sum+=num[i]
-  }
-  console.log(sum%2===0?"even":"odd");
+num===0||num===1?false:num===2?true:num%2===0?false:num%3===0?false:true
+
+return false
 });
