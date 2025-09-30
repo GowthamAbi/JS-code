@@ -13,9 +13,7 @@ inp.on("line", (data) => {
 });
 
 inp.on("close", () => {
-let num=userInput[0]
 
-num===0||num===1?false:num===2?true:num%2===0?false:num%3===0?false:true
+console.log("output")
 
-return false
 });
